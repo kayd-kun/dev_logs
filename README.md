@@ -5,6 +5,7 @@
 - [ ] Latest blogs (sort by latest)
 - [ ] Blogs pagination
 - [ ] Styling for each blog posts (integrate)
+- [ ] Create and update About page
 
 # Astro Starter Kit: Minimal
 
