@@ -1,3 +1,11 @@
+# TODO:
+- [x] Integrate Tailwind
+- [ ] Add your own profile picture
+- [x] Latest blogs MVP
+- [ ] Latest blogs (sort by latest)
+- [ ] Blogs pagination
+- [ ] Styling for each blog posts (integrate)
+
 # Astro Starter Kit: Minimal
 
 ```

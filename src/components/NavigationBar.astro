@@ -1,0 +1,21 @@
+---
+import ThemeToggler from '../components/ThemeToggler.astro'
+---
+
+<nav class="bg-gray-800 text-white py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center items-center gap-8">
+            <a href="/" class="flex items-center px-3">
+                Home
+                <span class="sr-only">Home</span>
+            </a>
+
+            <a href="/blogs" class="px-3">Blogs</a>
+
+            <a href="/about" class="px-3">About</a>
+
+            <button id="theme-toggle" class="text-xl ml-3">🌙</button>
+            <!-- <ThemeToggler/> -->
+        </div>
+    </div>
+</nav>

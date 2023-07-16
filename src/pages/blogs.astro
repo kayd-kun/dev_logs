@@ -1,0 +1,26 @@
+---
+import Main from "../layouts/Main.astro";
+// Get all blog posts
+const posts = await Astro.glob('../pages/blogs/*.md') 
+
+// Sort posts by date
+posts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
+---
+
+<Main>
+  <div class="max-w-4xl mx-auto my-8 px-6">
+    <h1 class="text-3xl font-bold mb-6">All Blogs</h1>
+        <ul class="space-y-6">
+            {posts.map(post => (
+                <li class="bg-white shadow rounded-lg overflow-hidden">
+                <a href={post.url} class="block p-6 hover:underline">
+                    <h3 class="text-xl font-semibold mb-2">{post.frontmatter.title}</h3>  
+                    <time datetime={post.frontmatter.pubDate} class="text-gray-500 text-sm">
+                    {new Date(post.frontmatter.pubDate).toDateString()}
+                    </time>
+                </a>
+                </li>
+            ))}
+        </ul>
+  </div>
+</Main>

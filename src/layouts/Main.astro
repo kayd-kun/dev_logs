@@ -1,0 +1,32 @@
+---
+import Footer from "../components/Footer.astro";
+import NavigationBar from "../components/NavigationBar.astro";
+
+type props = {
+    title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="Kamal Acharya's Website" />
+        <!-- Title HardCoded for now -->
+        <title>{title}</title>
+    </head>
+    <body>
+        <main class=" flex flex-col min-h-screen">
+            <NavigationBar />
+            <div class="flex-grow">
+                {/* We want the content to be rendered here*/}
+                <slot />
+            </div>
+            <Footer />
+        </main>
+    </body>
+</html>
